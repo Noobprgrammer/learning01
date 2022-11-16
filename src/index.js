@@ -1,17 +1,42 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
+let name = "Meekail"
+let age 
+let pronoun
+if (name === "Meekail"){
+    age = 25;
+    pronoun = "he"
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Head(){
+    return(
+        <>
+            <img src = "./logo512.png" width = "40px" alt=""/>
+            <h1>Hello {name}</h1>
+            <h2>{pronoun} are {age}</h2>
+        </>
+    )
+}
+function Fun(){
+    return(
+        <>
+            <h2>Fun things about react</h2>
+            <ul>
+                <li>Released in 2023</li>
+                <li>Was originally created by someone without a life, so that we can have one </li>
+                <li>Has well over 100k stars on GitHub</li>
+                <li>Is maintainted by Facebook, i know weird</li>
+                <li>Powers a lot of things, like my dick</li>
+            </ul>
+        </>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const element = (
+    <div>
+        <Head/>
+        <Fun/>
+    </div>
+)
+console.log(element)
+ReactDom.render(element, document.getElementById('root'));
