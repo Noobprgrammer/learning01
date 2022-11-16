@@ -20,6 +20,7 @@ function Head(){
 function Fun(){
     return(
         <>
+            <Head/>
             <h2>Fun things about react</h2>
             <ul>
                 <li>Released in 2023</li>
